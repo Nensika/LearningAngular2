@@ -1,3 +1,10 @@
-<p>
-  todos works!
-</p>
+<h3>Add todo</h3>
+<form (submit)="addTodo()">
+  <input type="text" [(ngModel)] ="todos.text" name="">
+</form>
+<h3>Todo list</h3>
+<ul>
+  <li *ngFor="let stavka of todos">
+    {{stavka.text}}
+  </li>
+</ul>
